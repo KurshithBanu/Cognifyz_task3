@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py 1.8">
+        <h1>Welcome to the Form Page</h1>
+        <p>Fill in your details and submit the form !</p>
+    </header>
+
+    <!-- Main container for centering form -->
+    <main class="d-flex justify-content-center align-items-center" style="min-height: 60vh; margin-top:8px;">
+        <div class="col-md-3 col-lg-4">
+            <form action="/thankyou" method="POST" class="p-4 shadow-sm bg-light rounded" onsubmit="return validateForm();">
+                <div id="error-message" class="text-danger"></div>
+
+                <div class="mb-2">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+
+                <div class="mb-2">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="mb-2">
+                    <label for="phone" class="form-label">Phone:</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+
+                <div class="mb-2">
+                    <label class="form-label">Gender:</label>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    <label for="nationality" class="form-label">Nationality:</label>
+                    <select id="nationality" name="nationality" class="form-select" required>
+                        <option value="Indian">Indian</option>
+                        <option value="American">American</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="mb-2">
+                    <label for="comments" class="form-label">Comments:</label>
+                    <textarea id="comments" name="comments" class="form-control" rows="2"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3" style="margin-top:8px;">
+        &copy; 2025 Forms using CSS with Bootstrap. All Rights Reserved.
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
